@@ -2,10 +2,13 @@
 
 <%= link_to "Add a Cocktail", new_cocktail_path %>
 
+
 <ul>
   <% @cocktails.each do |cocktail| %>
     <li>
       <h2>
+        <%= cl_image_tag("uwwkg5ki1dp6aptkgycn.jpg",
+      width: 400, height: 300, crop: :fill) %>
         <%= link_to cocktail.name, cocktail_path(cocktail) %>
       </h2>
     </li>
